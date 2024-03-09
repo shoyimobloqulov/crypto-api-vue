@@ -29,6 +29,7 @@ export default {
   methods: {
     async fetchExchangeRates() {
       try {
+        // Api request
         this.exchangeRates = await axios.get('https://v6.exchangerate-api.com/v6/fb70b0dc43caf2cdb4b286c5/latest/USD');
         this.showCheck = true
         this.time_last_update_utc = this.exchangeRates.data.time_last_update_utc
